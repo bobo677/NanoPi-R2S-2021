@@ -22,7 +22,7 @@ env:
 jobs:
   Build:
     runs-on: ubuntu-18.04
-    if: github.repository == 'DHDAXCW/NanoPi-R2S-2021'
+    if: github.repository == 'bobo677/NanoPi-R2S-2021'
     outputs:
       OPENWRTROOT: ${{ steps.update.outputs.OPENWRTROOT }}
       PLATFORM: ${{ steps.compile.outputs.PLATFORM }}
@@ -65,7 +65,7 @@ jobs:
         git clone --depth=1 https://github.com/coolsnowwolf/packages customfeeds/packages
         git clone --depth=1 https://github.com/coolsnowwolf/luci customfeeds/luci
         chmod +x ../scripts/*.sh
-        ../scripts/hook-feeds.sh
+        ../scripts/lean_stable.sh
         
     - name: Install Feeds
       run: |
@@ -168,7 +168,7 @@ jobs:
   Upload:
     needs: [Build]
     runs-on: ubuntu-18.04
-    if: github.repository == 'DHDAXCW/NanoPi-R2S-2021'
+    if: github.repository == 'bobo677/NanoPi-R2S-2021'
     steps:
       - name: Checkout
         uses: actions/checkout@main
