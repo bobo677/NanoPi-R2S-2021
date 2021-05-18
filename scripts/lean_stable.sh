@@ -13,7 +13,7 @@ pushd package/community
 git clone --depth=1 https://github.com/Lienol/openwrt-package
 
 # Add luci-app-passwall
-#git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall
+git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall
 
 # Add luci-app-vssr <M>
 # git clone --depth=1 https://github.com/jerrykuku/lua-maxminddb.git
@@ -46,11 +46,6 @@ git clone --depth=1 https://github.com/Lienol/openwrt-package
 # Add luci-app-onliner (need luci-app-nlbwmon)
 # git clone --depth=1 https://github.com/rufengsuixing/luci-app-onliner
 
-# Add luci-app-adguardhome
-svn co https://github.com/immortalwrt/luci/branches/openwrt-18.06/applications/luci-app-adguardhome luci/applications/luci-app-adguardhome
-svn co https://github.com/immortalwrt/packages/branches/openwrt-18.06/net/adguardhome packages/net/adguardhome
-svn co https://github.com/immortalwrt/packages/branches/openwrt-18.06/lang/node-yarn packages/lang/node-yarn
-svn co https://github.com/immortalwrt/packages/branches/openwrt-18.06/devel/packr packages/devel/packr
 
 # Add luci-app-diskman
 # git clone --depth=1 https://github.com/SuLingGG/luci-app-diskman
